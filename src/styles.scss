@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+table.diamondsweeper-board {
+    td {
+      padding: 0;
+      border: 1px solid black;
+    }
+  }
+  
+  .cell {
+    height: 50px;
+    width: 50px;
+    background-size: 50px 50px;
+    cursor: pointer;
+  
+    &.diamond {
+      background-image: url(assets/images/diamond.png);
+    }
+  
+    &.arrow {
+      background-image: url(assets/images/arrow.png);
+    }
+  
+    &.unknown {
+      background-image: url(assets/images/question.png);
+    }
+  }
+  

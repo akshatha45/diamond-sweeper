@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center" *ngIf="!gameOverFlag">
+  <h1>User score- {{userScore}}</h1>
+  <div id="container">
+    <div>
+      <div class="messages"></div>
+      <table class="diamondsweeper-board">
+        <tbody>
+          <tr *ngFor="let arrayEach of arrayObj;let i=index">
+            <td *ngFor="let boxEach of arrayEach; let j=index">
+              <div class="cell unknown " *ngIf='!boxEach.diamondFlag && !boxEach.clicked' (click)="onClick(i,j)">
+              </div>
+              <div class="cell diamond" *ngIf='boxEach.diamondFlag' (click)="onClick(i,j)">
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div style="text-align:center" class="gameover" *ngIf="gameOverFlag">
+  <div class="heading">Game over</div>
+  <h3>Your Final score is - {{userScore}}</h3>
+  <button class="btn btn-primary" (click)="gameOver()"> Restart the game</button>
+</div>
