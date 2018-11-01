@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'app';
   public diamond = [1, 2, 3, 4, 5, 6, 7, 8];
   public arrayObj = [];
   public sample: BoxObject;
   public userScore = 64;
   public diamondCounter = 0;
   public gameOverFlag = false;
+
   /*
   * function is called on click on the each box
   * the user score is decremented on each click to get score
@@ -39,6 +39,7 @@ export class AppComponent implements OnInit {
     this.diamondCounter = 0;
     this.gameOverFlag = false;
     this.arrayObj = [];
+    this.userScore = 64;
     this.ngOnInit();
   }
 
